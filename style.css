@@ -84,3 +84,168 @@ a[href="#design"] {
 
 
 /* Hieronder komen jouw animaties en stijlen */
+
+a[href="#frontend"] {
+
+}
+
+.scale {
+  animation: scale 0.5s 4;
+}
+
+@keyframes scale {
+  0%, 50%, 100% {
+    transform: scale(1);
+  }
+
+  25%, 75% {
+    transform: scale(2);
+  }
+}
+
+
+
+/* translate */
+
+a[href="#and"] {
+
+}
+
+.translate {
+  animation: translate 0.5s forwards;
+}
+
+@keyframes translate {
+  0% {
+    transform: translateX(0rem);
+  }
+
+  100% {
+    transform: translateX(10rem);
+  }
+}
+
+
+/* Shake */
+
+.shake {
+  animation: shake 0.5s 4;
+}
+
+@keyframes shake {
+0%, 50%, 100% {
+    transform: translateX(1rem);
+  }
+
+  25%, 75% {
+    transform: translateX(-1rem);
+  }
+}
+
+
+/* Sprint 5 - kleur */
+
+@keyframes kleur {
+  50% {
+    color: #050840;
+    background-color: aqua;
+  }
+}
+
+.kleur {
+  animation: kleur 1s;
+}
+
+
+
+/* Fix - textcontent */
+
+[href="#fix"] {
+  transition: all 1s ease;
+}
+
+
+
+
+
+/* The - mouse out */
+
+@keyframes mouse-out {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mouse-out {
+  animation: mouse-out 1s ease;
+}
+
+
+/* Flow - mouseup/mousedown */
+
+@keyframes flow {
+  50% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+.flow {
+  animation: flow 1s ease;
+}
+
+
+
+/* User - Key up */
+
+@keyframes key-up {
+  100% {
+    background-color: red;
+    color: white;
+  }
+}
+
+.key-up {
+  animation: key-up 1s ease;
+}
+
+
+/* Interface - keydown */
+
+.interface {
+  animation: interface 2s ease forwards;
+}
+
+
+
+@keyframes interface {
+  0% {
+    scale: 1;
+  }
+  30% {
+    scale: 1.5;
+  }
+  40% {
+    scale: 1.2;
+  }
+  60% {
+    scale: 2;
+  }
+  70% {
+    scale: 1.6;
+  }
+  100% {
+    scale: 2.5;
+  }
+}
+
+
+/* Events - scroll */
+
+a[href="#events"] {
+  --font-size: 16px;
+  font-size: var(--font-size);
+}

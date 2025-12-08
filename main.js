@@ -33,3 +33,137 @@ designLink.addEventListener('animationend', jumpHandler)
 
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
 // scaleLink.classList.toggle...
+
+const frontend = document.querySelector('[href="#frontend"]')
+
+frontend.addEventListener('click', function() {
+  frontend.classList.add('scale')
+})
+
+frontend.addEventListener('animationend', function() {
+  frontend.classList.remove('scale')
+})
+
+
+
+
+// translate
+
+const translate = document.querySelector('[href="#and"]')
+
+translate.addEventListener('click', function() {
+  translate.classList.toggle('translate')
+})
+
+
+
+//Development
+
+const development = document.querySelector('[href="#development"]')
+
+development.addEventListener('dblclick', function(){
+  development.classList.add('shake')
+})
+
+development.addEventListener('animationend', function() {
+  development.classList.remove('shake')
+})
+
+
+
+// Sprint 5 - kleur
+
+const sprint5 = document.querySelector('[href="#sprint-5"]')
+
+sprint5.addEventListener('focus', function() {
+  sprint5.classList.add('kleur')
+})
+
+sprint5.addEventListener('animationend', function() {
+  sprint5.classList.remove('kleur')
+})
+
+
+
+// Fix - textcontent
+
+const fix = document.querySelector('[href="#fix"]')
+
+fix.addEventListener('mouseenter', function() {
+  fix.textContent = "Hallo wereld!"
+})
+fix.addEventListener('mouseleave', function() {
+  fix.textContent = "Fix"
+})
+
+
+// The - mouse-out
+
+const mouseOut = document.querySelector('[href="#the"]')
+
+mouseOut.addEventListener('mouseout', function() {
+  mouseOut.classList.add('mouse-out')
+})
+
+
+mouseOut.addEventListener('animationend', function() {
+  mouseOut.classList.remove('mouse-out')
+})
+
+
+// flow / mousedown mouseup
+
+const flow = document.querySelector('[href="#flow"]')
+
+flow.addEventListener('mousedown', function() {
+  flow.classList.add('flow')
+})
+flow.addEventListener('mouseup', function() {
+  flow.classList.remove('flow')
+})
+
+
+// User / keyup
+
+const keyUp = document.querySelector('[href="#user"]')
+
+keyUp.addEventListener('keyup', function(e) {
+  if (e.key === 'f') {
+    keyUp.classList.add('key-up')
+  }
+})
+
+keyUp.addEventListener('animationend', function() {
+  keyUp.classList.remove('key-up')
+})
+
+
+// Interface - keydown
+
+const interface = document.querySelector('[href="#interface"]')
+
+interface.addEventListener('keydown', function(e) {
+  if(e.key == "f") {
+    interface.classList.add('interface')
+  }
+})
+
+interface.addEventListener('keyup', function(e) {
+  if(e.key == "f") {
+    interface.classList.remove('interface')
+  }
+})
+
+
+const scroll = document.querySelector('[href="#events"]')
+
+scroll.addEventListener('wheel', function(e) {
+
+  // Current size
+
+  // if scroll up - current size + scroll amount
+  // if scroll down - current size - scroll amount
+
+  // Change current size to updated size
+
+})
