@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   --primary: #fff;
   --secondary: #050840;
@@ -17,12 +18,18 @@ body {
   font-size: 1rem;
   background: var(--secondary);
 }
-h1, h2, p, a {
+
+h1,
+h2,
+p,
+a {
   color: var(--primary)
 }
+
 li {
   font-size: 2em;
   display: inline-block;
+
   a {
     display: inline-block;
     margin: 0.2em;
@@ -33,7 +40,9 @@ li {
     border-radius: var(--pill);
     font-weight: normal;
     text-decoration: none;
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       color: var(--primary);
       border-color: var(--primary);
     }
@@ -62,21 +71,27 @@ a[href="#design"] {
   0% {
     transform: scale(1, 1) translateY(0);
   }
+
   10% {
     transform: scale(1.1, 0.9) translateY(0);
   }
+
   30% {
     transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);
   }
+
   50% {
     transform: scale(1.05, 0.95) translateY(0);
   }
+
   57% {
     transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);
   }
+
   64% {
     transform: scale(1, 1) translateY(0);
   }
+
   100% {
     transform: scale(1, 1) translateY(0);
   }
@@ -85,20 +100,22 @@ a[href="#design"] {
 
 /* Hieronder komen jouw animaties en stijlen */
 
-a[href="#frontend"] {
-
-}
+a[href="#frontend"] {}
 
 .scale {
   animation: scale 0.5s 4;
 }
 
 @keyframes scale {
-  0%, 50%, 100% {
+
+  0%,
+  50%,
+  100% {
     transform: scale(1);
   }
 
-  25%, 75% {
+  25%,
+  75% {
     transform: scale(2);
   }
 }
@@ -107,9 +124,7 @@ a[href="#frontend"] {
 
 /* translate */
 
-a[href="#and"] {
-
-}
+a[href="#and"] {}
 
 .translate {
   animation: translate 0.5s forwards;
@@ -133,11 +148,15 @@ a[href="#and"] {
 }
 
 @keyframes shake {
-0%, 50%, 100% {
+
+  0%,
+  50%,
+  100% {
     transform: translateX(1rem);
   }
 
-  25%, 75% {
+  25%,
+  75% {
     transform: translateX(-1rem);
   }
 }
@@ -224,18 +243,23 @@ a[href="#and"] {
   0% {
     scale: 1;
   }
+
   30% {
     scale: 1.5;
   }
+
   40% {
     scale: 1.2;
   }
+
   60% {
     scale: 2;
   }
+
   70% {
     scale: 1.6;
   }
+
   100% {
     scale: 2.5;
   }
@@ -274,4 +298,11 @@ a[href="#interaction"] {
     scale: 1.4;
     rotate: 180deg;
   }
+}
+
+
+/* wireflow */
+
+.gradientAdd {
+ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }

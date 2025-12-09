@@ -203,7 +203,6 @@ const everyThingElse = document.querySelectorAll('li *:not([href="#user-flow"])'
 userFlow.addEventListener('mouseenter', function(){
   everyThingElse.forEach(element => {
     element.classList.add('scaled')
-    element.classList.add('jump')
   });
 })
 userFlow.addEventListener('mouseleave', function(){
@@ -211,3 +210,29 @@ userFlow.addEventListener('mouseleave', function(){
     element.classList.remove('scaled')
   });
 })
+
+
+// Wireflow - Long press
+// https://www.youtube.com/watch?v=vNLfkRnrx3o
+
+// delay in ms
+const delay = 1000; 
+
+const wireflow = document.querySelector('a[href="#wireflow"]');
+
+// Touch start en click beiden als event listener. (hulp van perplexity)
+['touchstart', 'click'].forEach(e => {
+  wireflow.addEventListener(e, function (e) {
+    // zorg er voor dat hij niet andere longpress acties doet
+    e.preventDefault();
+
+    // maak de longpress gekoppeld aan de delay variable (perplexity en youtube hulp)
+    setTimeout(longPress, delay);
+  });
+});
+
+function longPress() {
+  console.log('1 seconden voorbij')
+  // voeg de class met de gradient toe aan de button
+  wireflow.classList.add('gradientAdd')
+}
