@@ -175,3 +175,21 @@ scroll.addEventListener('wheel', function(e) {
   // Change current size to updated size
   return scroll.style.setProperty('--font-size', newFontSize + 'px')
 })
+
+
+
+
+
+// interaction - mouse follow
+
+const interactionButton = document.querySelector('a[href="#interaction"]')
+
+interactionButton.addEventListener('mousemove', function(e) {
+
+  // console.log(e.offsetX)
+  // console.log(e.offsetY)
+
+
+  interactionButton.style.setProperty('--X', e.offsetX + 'px')
+  interactionButton.style.setProperty('--Y', e.offsetY + 'px')
+})

@@ -167,7 +167,6 @@ a[href="#and"] {
 
 
 
-
 /* The - mouse out */
 
 @keyframes mouse-out {
@@ -249,4 +248,16 @@ a[href="#events"] {
   --font-size: 16px;
   font-size: var(--font-size);
   overscroll-behavior: contain;
+}
+
+
+
+
+/* Interaction - mousefollow */
+
+a[href="#interaction"] {
+  --X: 50%;
+  --Y: 50%;
+
+  background-image: radial-gradient(circle farthest-side at var(--X) var(--Y), blue 0%, transparent 100%)
 }
