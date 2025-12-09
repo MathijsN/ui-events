@@ -158,24 +158,17 @@ interface.addEventListener('keyup', function(e) {
 const scroll = document.querySelector('[href="#events"]')
 
 scroll.addEventListener('wheel', function(e) {
-
   // Current size
   // https://www.tutorialspoint.com/get-and-set-css-variables-with-javascript
-  const fontSize = getComputedStyle(scroll).getPropertyValue('--font-size')
-  // returns string
+  const fontSize = parseInt(getComputedStyle(scroll).getPropertyValue('--font-size'), 10)
   // console.log(typeof fontSize) 
-
   // string to number
   // https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/
-  const numberFontSize = parseInt(fontSize, 10)
-  // console.log(numberFontSize)
-
-
 
   const scrollAmount = Math.floor(e.deltaY) / 100
   console.log(scrollAmount)
 
-  const newFontSize = numberFontSize + scrollAmount
+  const newFontSize = fontSize + scrollAmount
 
   // console.log(newFontSize)
 
