@@ -253,11 +253,25 @@ a[href="#events"] {
 
 
 
-/* Interaction - mousefollow */
+/* Interaction - mousemove */
 
 a[href="#interaction"] {
   --X: 50%;
   --Y: 50%;
 
   background-image: radial-gradient(circle farthest-side at var(--X) var(--Y), blue 0%, transparent 100%)
+}
+
+
+/* User flow / mousemove */
+
+.scaled {
+  animation: scaling 0.3s ease;
+}
+
+@keyframes scaling {
+  50% {
+    scale: 1.4;
+    rotate: 180deg;
+  }
 }

@@ -180,7 +180,7 @@ scroll.addEventListener('wheel', function(e) {
 
 
 
-// interaction - mouse follow
+// interaction - mousemove
 
 const interactionButton = document.querySelector('a[href="#interaction"]')
 
@@ -192,4 +192,22 @@ interactionButton.addEventListener('mousemove', function(e) {
 
   interactionButton.style.setProperty('--X', e.offsetX + 'px')
   interactionButton.style.setProperty('--Y', e.offsetY + 'px')
+})
+
+
+// User flow - mousemove
+
+const userFlow = document.querySelector('a[href="#user-flow"]')
+const everyThingElse = document.querySelectorAll('li *:not([href="#user-flow"])')
+
+userFlow.addEventListener('mouseenter', function(){
+  everyThingElse.forEach(element => {
+    element.classList.add('scaled')
+    element.classList.add('jump')
+  });
+})
+userFlow.addEventListener('mouseleave', function(){
+  everyThingElse.forEach(element => {
+    element.classList.remove('scaled')
+  });
 })
