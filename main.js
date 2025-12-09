@@ -160,10 +160,25 @@ const scroll = document.querySelector('[href="#events"]')
 scroll.addEventListener('wheel', function(e) {
 
   // Current size
+  // https://www.tutorialspoint.com/get-and-set-css-variables-with-javascript
+  const fontSize = getComputedStyle(scroll).getPropertyValue('--font-size')
+  // returns string
+  // console.log(typeof fontSize) 
 
-  // if scroll up - current size + scroll amount
-  // if scroll down - current size - scroll amount
+  // string to number
+  // https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/
+  const numberFontSize = parseInt(fontSize, 10)
+  // console.log(numberFontSize)
+
+
+
+  const scrollAmount = Math.floor(e.deltaY) / 100
+  console.log(scrollAmount)
+
+  const newFontSize = numberFontSize + scrollAmount
+
+  // console.log(newFontSize)
 
   // Change current size to updated size
-
+  return scroll.style.setProperty('--font-size', newFontSize + 'px')
 })
